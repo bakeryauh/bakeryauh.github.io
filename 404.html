@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <base  />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Janat Group</title>
+	<link href="indexc0d0.html?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="index7b17.html?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	<link href="templates/janat/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="media/system/js/captionc1ea.js?87a302bb0d6d634d5a2362825d30f599" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+
+		<link rel="shortcut icon" href="img/jbgrem-removebg-preview.png" type="image/x-icon">
+        <meta name="viewport" content=" initial-scale=1.0,width=device-width">
+        <link href="img/jbgrem-removebg-preview.png" rel="icon" type="image/x-icon" />
+        <link href="templates/janat/css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="templates/janat/css/animate.css" rel="stylesheet" type="text/css" />
+        <script src="templates/janat/js/jquery-1.10.2.js"></script>
+        <script src="templates/janat/js/jquery.flexslider.js"></script>
+        <script src="templates/janat/js/jquery.slimscroll.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800' rel='stylesheet' type='text/css'>
+        <style type="text/CSS">
+        </style>
+    
+    <script>
+        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+        if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+        function mischandler(){
+        return false;
+        }
+        function mousehandler(e){
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if((eventbutton==2)||(eventbutton==3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
+        </script>
+
+</head>
+
+
+
+         
+        <script>
+
+            function bg_fix(cover_usa) {
+                var image_usa = ($('.body_background img').height() / 2) * -1;
+                var display = $(window).height();
+                $('.body_background img').css('top', '50%');
+                if (display > 900) {
+
+                    cover_usa = parseInt(cover_usa) + 100;
+//alert(cover_usa);
+                    image_usa = parseInt(image_usa) - 50;
+                }
+                $('.body_background ').css('height', cover_usa);
+                $('.body_background img').css('margin-top', image_usa);
+            }
+
+            $(window).load(function () {
+                bg_fix('750');
+                main_content_count();
+
+
+            });
+
+            $(document).ready(function () {
+                bg_fix('750');
+                main_content_count();
+                $(".main_contents").fadeIn();
+                data = $('.left_bar ul').html()
+                data = data + $('.right_bar ul').html()
+                $('.mobile_side_bar ul').html(data);
+
+                $('.burgers_links').click(function () {
+                    $('body').toggleClass('actives');
+                    $('.mobile_side_bar').toggleClass('active_menu');
+                    $('.fade_background').fadeToggle();
+                });
+				                $('.links').prepend("<a href='#_' class='mobile_menu'> Menu <span class='plusser'>+</span></a>");
+                $('.links .mobile_menu').click(function () {
+                    $('.left_side_bar .links ul').slideToggle();
+                    $(this).toggleClass('active_menu');
+                });
+				            });
+            $(window).resize(function () {
+                bg_fix('750');
+                main_content_count();
+            });
+
+            function main_content_count() {
+                var palala = $('#container').width() - 50;
+                var get_window = $(window).width();
+                var side_bar = $('.side_bar_cover').width();
+                palala = palala - side_bar;
+                if (get_window < 1024) {
+                    //palala = palala - 80;
+                }
+                $('.main_contents').width(palala);
+
+            }
+            function next_button() {
+                $('#slider_sector .flex-next').click();
+                $(".slide_content .brand_div").removeClass('hiddens');
+            }
+            function pre_button() {
+                $('#slider_sector .flex-prev').click();
+                $(".slide_content .brand_div").removeClass('hiddens');
+            }
+            function set_large_map() {
+                get_map_palala = $('.body_background').width();
+                get_map_usa = $('.body_background').height();
+                $('#google_map_main').height(get_map_usa);
+                $('#google_map_main').width(get_map_palala);
+            }
+        </script>
+    <body class="page-class-101 ">
+<style>
+.bg_mesh
+{
+    width:100%;
+    height:100%;
+    background:url(templates/janat/img/312c.bg-dot-pattern.312ca5e4.cache.png) top left rgba(34, 34, 34, 0.82);;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 600;
+    opacity: 0.7;
+}
+</style>
+        <div id="wrapper">
+            <!--<a href="#_" onclick="next_button()" class="next_arrows_main">next</a>
+            <a href="#_" onclick="pre_button()" class="privious_arrows_main">Privious</a>-->	
+            <div class="fade_background"></div>	
+            <div class="mobile_side_bar">
+                <ul></ul>
+            </div>
+            <div class="header_cover">
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/janatg-nobg.png" /></a>
+                        <div class="logo_bg"></div>
+                    </div>
+                    <div class="left_bar">
+                        <ul>
+                                                        
+                                                            <li ><a href="" ><span>Our </span> Company</a></li>
+                                                            
+                                                            <li ><a href="" ><span>Janat </span> Construction</a></li>
+                                                            <li ><a href="JanatAgri/" ><span>Janat </span> Agriculture</a></li>
+                                                        </ul>
+                        <div class="left_backgrounds"></div>
+                    </div>
+                    <div class="right_bar">
+                        <ul>
+                                                            
+                                                                <li ><a href="" ><span>Janat </span> IT Solutions</a></li>
+                                                                <li ><a href="" ><span>Retail & </span> Services</a></li>
+                                                                <li ><a href="" ><span>Real Estate & </span> Contracting</a></li>
+                                                        </ul>
+                        <div class="right_backgrounds"></div>
+                    </div>		
+                    <div class="clear"></div>	
+                    <a href="" class="burgers_links"><img src="templates/janat/img/burger.png" /></a>	
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="body_background">
+                <div class="bg_mesh"></div>
+
+
+
+                
+
+<div class="body_background" style="background: url(img/janat-slider.webp) center no-repeat;  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+                
+                <img src="img/janat-slider.webp" class="ie_image"/>  
+            </div>	 
+            </div>			
+            <div id="container">	
+<style>
+ .bg_mesh 			{display:none}
+</style>
+<script src="templates/janat/js/jquery.lettering.js"></script>
+<script src="templates/janat/js/jquery.textillate.js"></script>
+
+<script>
+
+    
+$( window ).load(function() {
+	//bg_fix('550');
+	main_content_count();
+  $('#text_slider').flexslider({
+    animation: "fade",
+	directionNav: false
+  });	
+		values =0;
+		stop= $( ".bottom_logos .logo_covers").length+1;
+		counter = 0;
+		var mytimer =setInterval(function(){
+			values ++;
+			record_number = values;
+			$(" .bottom_logos .logo_covers:nth-child("+ values + ")" ).addClass('animated');
+			$( ".bottom_logos .logo_covers:nth-child("+ values + ")" ).removeClass('hiddens_ico');
+			$(" .bottom_logos .logo_covers:nth-child("+ values + ")" ).addClass('flipInY');			
+			counter ++ ;
+			if(counter == stop){
+				clearInterval(mytimer)
+				$(" .bottom_logos .logo_covers").addClass('animated');
+				$(" .bottom_logos .logo_covers").removeClass('hiddens_ico');
+				$(" .bottom_logos .logo_covers").addClass('flipInY');
+				$(" .bottom_logos .logo_covers:nth-child("+ values + ")" ).removeClass('animated');
+				$( " .bottom_logos .logo_covers:nth-child("+ values + ")" ).removeClass('flipInY');			
+			}
+		}, 100);	  
+        h1_text = $('.text_slides h1').html();
+        h2_text = $('.text_slides h4').html();
+    
+        $('.text_slides h4').textillate({ in: { effect: 'flipInY' } });
+        $('.text_slides h1').textillate({ in: { effect: 'flipInY' } });
+
+});
+
+$( document ).ready(function() {
+	//bg_fix('550');
+	main_content_count();
+  $('#text_slider').flexslider({
+    animation: "fade",
+	directionNav: false
+  });
+    $('.body_background').addClass('home_special');
+	
+
+	
+});	
+</script>
+<style>
+.text_slides h1 {visibility:hidden}
+.text_slides h4 {visibility:hidden}
+</style>
+	<div class="home_page">
+            <div class="slide_texts">
+    <!-- Place somewhere in the <body> of your page -->
+    <div class="flexslider" id="text_slider">
+        <ul class="slides">
+			            <li>
+                <div class="text_slides">
+                    <h1>JANAT GROUP OF COMPANIES</h1>
+                    <h4>Complete Solutions in one stop Company</h4>
+                </div>	
+            </li>
+												        </ul>
+    </div>		
+</div>	
+
+ 
+            <div class="bottom_logos">
+		<div class="logo_covers hiddens_ico"><img src="" /></div>
+		<div class="logo_covers hiddens_ico"><img src="" /></div>
+		<div class="logo_covers hiddens_ico"><img src="" /></div>
+		<div class="logo_covers hiddens_ico"><img src="" /></div>
+		<div class="logo_covers hiddens_ico"><img src="" /></div>
+	</div>	 
+	
+	</div>
+	<div class="spcial_content_bg"></div>
+	<div class="shadows_body"></div>
+	<div class="special_contents">
+		<a href="" class="main_link_box">	
+    <div class="icn_box" style="background: url(templates/janat/img/leader.png) no-repeat center">
+    </div>
+    <div class="text_area">
+                <h2><span>Janat</span>Construction</h2>
+        
+        
+    </div>
+</a>	
+<a href="" class="main_link_box">	
+    <div class="icn_box" style="background: url(templates/janat/img/tags.png) no-repeat center"></div>
+    <div class="text_area">
+               <h2><span>Janat</span>IT Solutions</h2>
+    </div>
+</a>
+<a href="JanatAgri/index.html" class="main_link_box">	
+    <div class="icn_box" style="background: url(templates/janat/img/awards.png) no-repeat center"></div>
+    <div class="text_area">
+                <h2><span>Janat</span>Agriculture</h2>
+    </div>
+</a>	
+	
+	</div>
+
+</div>
+
+<div class="footer_cover">
+    <div class="footer">
+        <div class="footer_block the_group_block" style=" width: 140px; ">
+            <h4>The Group</h4>
+<ul>
+            <li><a href="">History</a></li>
+                <li><a href="">Company</a></li>
+                <li><a href="">Manufacturing </a></li>
+                
+    </ul> 
+        </div>		
+        <div class="footer_block our_business_block">
+            <h4>Our Business</h4>
+<ul>
+            
+                <li><a href="">Industrial Manufacturing</a></li>
+                <li><a href="">Trading & Distribution</a></li>
+                <li><a href="">Retail & Services</a></li>
+                <li><a href="">Real Estate and Contracting</a></li>
+    </ul> 
+        </div>		
+        <div class="footer_block product_block">
+            <h4>Products</h4>
+<ul>
+            <li><a href="JanatAgri/product.html">Heirloom Corn</a></li>
+                <li><a href="JanatAgri/product.html">Summer Tomatoes</a></li>
+                <li><a href="JanatAgri/product.html">Cherry Tomato</a></li>
+                <li><a href="JanatAgri/product.html">Stone Fruit</a></li>
+               
+    </ul> 
+        </div>	
+		<div class="footer_block product_block_2">
+            <h4> </h4>
+<ul>
+            <li><a href="">Dessert and ingredients</a></li>
+                <li><a href="">Fruit Juices</a></li>
+                <li><a href="">Edible Oil</a></li>
+                <li><a href="">Welcome to website</a></li>
+        </ul> 
+        </div>
+        <div class="footer_logo">
+            <img src="img/janatg-nobg.png"  width="180" height="100" /><br>
+        	<img src="">
+        	</div>
+        <div class="clear"></div>			
+    </div>
+      
+    <div class="clear"></div>	
+    <div class="footer_dark">
+        <div class="main_footer">
+            <div class="copy">Copyright © 2022 Janat Group of Companies | Designed & Developed by <a href="https://janatuae.com/" target="_blank">Janat</a> | </div>
+            <div class="site_map_links">
+                <ul>
+                                            <li><a href=""></a></li> |                                             <li><a href="JanatAgri/contact.html">Contact us</a></li> |                                             <li><a href="site-map.html">Site map</a></li>                                    </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="clear"></div>	
+</div>	
+</div>
+
+<script>
+$('.slide_content').slimScroll({
+    position: 'right',
+    height: '450px',
+    size: '8px',
+    railVisible: true,
+    alwaysVisible: true
+});
+    
+$('.long-description-content ').slimScroll({
+    position: 'right',
+    height: '510px',
+    size: '8px',
+    railVisible: true,
+    alwaysVisible: true
+});
+    
+$('.long-description').slimScroll({
+    position: 'right',
+    height: '200px',
+    size: '8px',
+    railVisible: true,
+    alwaysVisible: true
+});
+  
+    
+</script>
+</body>
+</html>
