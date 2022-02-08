@@ -127,7 +127,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" placeholder="Email" id="email" class="form-control" name="Email" required data-error="Please enter your email">
+									<input type="email" placeholder="Email" id="email" class="form-control" name="Email" required data-error="Please enter your email">
 									<div class="help-block with-errors"></div>
 								</div> 
 							</div>
@@ -159,11 +159,11 @@
         $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
-        url:"https://script.google.com/macros/s/AKfycbwE41D00_MQX0bpcvPTy2WLeMWz32asEfM7vLzuDZpMcEDqRkBVT8Mtow/exec",
+        url:"https://script.google.com/macros/s/AKfycbw9LdFOMckbKeQ3qOQtWw5a7C3iB50tHEI0o4vIjSHyGx6jfPFg35Y8pqLwRyKsRWAIKg/exec",
         data:$("#submit-form").serialize(),
         method:"post",
         success:function (response){
-        alert("Your message has been sent. Thank you!")
+        alert("One of our team will be in contact with you shortly, Thank you!")
         window.location.reload()
         //window.location.href="https://google.com"
         },
