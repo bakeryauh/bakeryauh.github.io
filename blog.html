@@ -13,19 +13,14 @@
     <meta name="keywords" content="Indian bakery, Indian restaurant, authentic Indian food, fresh baked goods, masala chai, butter naan">
     <meta name="author" content="New Indian Bakery & Restaurant">
 
-
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/logo-rbg.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/logo-rbg.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">    
 	<!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">    
-	<!-- Pickadate CSS -->
-    <link rel="stylesheet" href="css/classic.css">    
-	<link rel="stylesheet" href="css/classic.date.css">    
-	<link rel="stylesheet" href="css/classic.time.css">    
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
@@ -49,7 +44,6 @@
 		document.onmouseup = mousehandler;
 		</script>
 
-
 </head>
 
 <body>
@@ -65,11 +59,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">More</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="reservation.html">Reservation</a>
 								<a class="dropdown-item" href="stuff.html">Staff</a>
@@ -96,171 +90,167 @@
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1>Reservation</h1>
+					<h1>Blog</h1>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- End All Pages -->
 	
-	<!-- Start Reservation -->
-	<div class="reservation-box">
+	<!-- Start blog details -->
+	<div class="blog-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Reservation</h2>
-						<p></p>
+						<h2>Blog</h2>
+						<p>Welcome to New Indian Bakery and Restaurant – A Taste of Tradition</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-12 col-sm-12 col-xs-12">
-					<div class="contact-block">
-						<form id="submit-form">
-							<div class="row">
-								<div class="col-md-6">
-									<h3>Book a table</h3>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input id="input_date" class="datepicker picker__input form-control" name="date" type="text" value="" equired data-error="Please enter Date">
-											<div class="help-block with-errors"></div>
-										</div>                                 
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input id="input_time" class="time form-control picker__input" required data-error="Please enter time">
-											<div class="help-block with-errors"></div>
-										</div>                                 
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
-											  <option disabled selected>Select Person*</option>
-											  <option value="1">1</option>
-											  <option value="2">2</option>
-											  <option value="3">3</option>
-											  <option value="4">4</option>
-											  <option value="5">5</option>
-											  <option value="6">6</option>
-											  <option value="7">7</option>
-											</select>
-											<div class="help-block with-errors"></div>
-										</div> 
-									</div>
+				<div class="col-xl-8 col-lg-8 col-12">
+					<div class="blog-inner-details-page">
+						<div class="blog-inner-box">
+							<div class="side-blog-img">
+								<img class="img-fluid" src="img/IMG_20190927_201940.jpg" alt="">							
+								<div class="date-blog-up">
+									28 Fab
 								</div>
-								<div class="col-md-6">
-									<h3>Contact Details</h3>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-											<div class="help-block with-errors"></div>
-										</div>                                 
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
-											<div class="help-block with-errors"></div>
-										</div> 
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="text" placeholder="Your Numbar" id="phone" class="form-control" name="phone" required data-error="Please enter your Numbar">
-											<div class="help-block with-errors"></div>
-										</div> 
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="submit-button text-center">
-										<button class="btn btn-common" id="submit" type="submit">Book Table</button>
-										<div id="msgSubmit" class="h3 text-center hidden"></div> 
-										<div class="clearfix"></div> 
-									</div>
-								</div>
-							</div>            
-						</form>
-
-						<script>
-							$("#submit-form").submit((e)=>{
-							e.preventDefault()
-							$.ajax({
-							url:"https://script.google.com/macros/s/AKfycbxXVP1ILRmf7A9DUI3vl7OZl6Qe-2ruBW6pL27d91vUFtOaxFgjAwQRZ1LKw-aWgxHQ4Q/exec",
-							data:$("#submit-form").serialize(),
-							method:"post",
-							success:function (response){
-							alert("One of our team will be in contact with you shortly, Thank you!")
-							window.location.reload()
-							//window.location.href="https://google.com"
-							},
-							error:function (err){
-							alert("Something Error")
-							
-							}
-							})
-							})
-							</script>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Reservation -->
-	
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2></h2>
-						<p> <b>ഓർമയിലേക്കൊരു മടക്ക യാത്ര </b></p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="img/glass-rbg.png" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"></strong></h5>
-								<h6 class="text-dark m-0"></h6>
-								<p class="m-0 pt-3"></p>
 							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="img/glass-rbg.png" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"></strong></h5>
-								<h6 class="text-dark m-0"></h6>
-								<p class="m-0 pt-3"></p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="img/glass-rbg.png" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"></strong></h5>
-								<h6 class="text-dark m-0"></h6>
-								<p class="m-0 pt-3"></p>
+							<div class="inner-blog-detail details-page">
+								<h3>Freshly Baked Goodies</h3>
+								
+								<p>Our bakery section offers a variety of freshly baked breads, pastries, and traditional Indian sweets. From soft naan and flavorful parathas to rich and creamy desserts, we bake everything with love and care.</p>
+								<p>Established with a vision to create a perfect blend of bakery delights and traditional Indian cuisine, New Indian Bakery and Restaurant has grown into a beloved culinary hotspot. What started as a humble bakery serving fresh breads and sweets has now evolved into a full-fledged restaurant offering a wide variety of Indian dishes.</p>
+								<blockquote>
+									<p>With a focus on quality, taste, and hygiene, we have been serving customers with love and dedication, ensuring that every bite is a flavorful experience.</p>
+								</blockquote>
+								<p>At New Indian Bakery and Restaurant, we are dedicated to bringing the authentic flavors of India to Abu Dhabi. From freshly baked goods to traditional Indian delicacies, our passion for quality food and excellent service has made us a favorite destination for food lovers.</p>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
+						
+						<div class="comment-respond-box">
+							<h3>Leave your comment </h3>
+							<div class="comment-respond-form">
+								<form id="commentrespondform" class="comment-form-respond row" method="post">
+									<div class="col-lg-6 col-md-6 col-sm-6">
+										<div class="form-group">
+											<input id="name_com" class="form-control" name="name" placeholder="Name" type="text">
+										</div>
+										<div class="form-group">
+											<input id="email_com" class="form-control" name="email" placeholder="Your Email" type="email">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6">
+										<div class="form-group">
+											<textarea class="form-control" id="textarea_com" placeholder="Your Message" rows="2"></textarea>
+										</div>
+									</div>
+									<div class="col-lg-12 col-md-12 col-sm-12">
+										<button class="btn btn-submit">Submit comment</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
+			
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-12 blog-sidebar">
+					<div class="right-side-blog">
+						<h3>Search</h3>
+						<div class="blog-search-form">
+							<input name="search" placeholder="Search blog" type="text">
+							<button class="search-btn">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
+						<h3>Categories</h3>
+						<div class="blog-categories">
+							<ul>
+								<li><a href="#"><span>Food</span></a></li>
+								<li><a href="#"><span>Pizza</span></a></li>
+								<li><a href="#"><span>Drink</span></a></li>
+								<li><a href="#"><span>Lorem Sit</span></a></li>
+								<li><a href="#"><span>Burger</span></a></li>
+								<li><a href="#"><span>Music</span></a></li>
+							</ul>
+						</div>
+						<h3>Recent Post</h3>
+						<div class="post-box-blog">
+							<div class="recent-post-box">
+								<div class="recent-box-blog">
+									<div class="recent-img">
+										<img class="img-fluid" src="images/post-img-01.jpg" alt="">
+									</div>
+									<div class="recent-info">
+										<ul>
+											<li><i class="zmdi zmdi-account"></i>Posted By : <span>Rubel Ahmed</span></li>
+											<li>|</li>
+											<li><i class="zmdi zmdi-time"></i>Time : <span>11.30 am</span></li>
+										</ul>
+										<h4>Duis feugiat neque sed dolor cursus, sed lacinia nisl pretium.</h4>
+									</div>
+								</div>
+								<div class="recent-box-blog">
+									<div class="recent-img">
+										<img class="img-fluid" src="images/post-img-02.jpg" alt="">
+									</div>
+									<div class="recent-info">
+										<ul>
+											<li><i class="zmdi zmdi-account"></i>Posted By : <span>Rubel Ahmed</span></li>
+											<li>|</li>
+											<li><i class="zmdi zmdi-time"></i>Time : <span>11.30 am</span></li>
+										</ul>
+										<h4>Duis feugiat neque sed dolor cursus, sed lacinia nisl pretium.</h4>
+									</div>
+								</div>
+								<div class="recent-box-blog">
+									<div class="recent-img">
+										<img class="img-fluid" src="images/post-img-03.jpg" alt="">
+									</div>
+									<div class="recent-info">
+										<ul>
+											<li><i class="zmdi zmdi-account"></i>Posted By : <span>Rubel Ahmed</span></li>
+											<li>|</li>
+											<li><i class="zmdi zmdi-time"></i>Time : <span>11.30 am</span></li>
+										</ul>
+										<h4>Duis feugiat neque sed dolor cursus, sed lacinia nisl pretium.</h4>
+									</div>
+								</div>
+								<div class="recent-box-blog">
+									<div class="recent-img">
+										<img class="img-fluid" src="images/post-img-01.jpg" alt="">
+									</div>
+									<div class="recent-info">
+										<ul>
+											<li><i class="zmdi zmdi-account"></i>Posted By : <span>Rubel Ahmed</span></li>
+											<li>|</li>
+											<li><i class="zmdi zmdi-time"></i>Time : <span>11.30 am</span></li>
+										</ul>
+										<h4>Duis feugiat neque sed dolor cursus, sed lacinia nisl pretium.</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3>Recent Tag</h3>
+						<div class="blog-tag-box">
+							<ul class="list-inline tag-list">
+								<li class="list-inline-item"><a href="#">Food</a></li>
+								<li class="list-inline-item"><a href="#">Drink</a></li>
+								<li class="list-inline-item"><a href="#">Nature</a></li>
+								<li class="list-inline-item"><a href="#">Italian</a></li>
+								<li class="list-inline-item"><a href="#">Bootstrap4</a></li>
+								<li class="list-inline-item"><a href="#">Fashion</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			
 			</div>
 		</div>
 	</div>
-	<!-- End Customer Reviews -->
+	<!-- End details -->
 	
 	<!-- Start Contact info -->
 	<div class="contact-imfo-box">
@@ -297,7 +287,7 @@
 		</div>
 	</div>
 	<!-- End Contact info -->
-
+	
 	<!-- Start Footer -->
 	<footer class="footer-area bg-f">
 		<div class="container">
@@ -323,11 +313,10 @@
 					<h3>Contact information</h3>
 					<p class="lead">Musaffah - Musaffah Industrial - Abu Dhabi</p>
 					<p class="lead"><a href="tel:+97125757955">+971 2 575 7955</a></p>
-					<p><a href="mailto:info@newindianbakery.ae"> info@newindianbakery.ae</a></p>
+					<p><a href="mailto:info@newindianbakery.ae">info@newindianbakery.ae</a></p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
-					
 					<p><span class="text-color">Monday: </span>05AM - 12AM</p>
 					<p><span class="text-color">Tue-Wed :</span>05AM - 12AM</p>
 					<p><span class="text-color">Thu-Fri :</span>05AM - 12AM</p>
@@ -340,8 +329,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<p class="company-name">&copy; 2025 New Indian Bakery & Restaurant. All rights reserved. </p>
-						
+						<p class="company-name">All Rights Reserved. &copy; 2025 <a href="#">New Indian Bakery</a> 
 					</div>
 				</div>
 			</div>
@@ -352,20 +340,16 @@
 	
 	<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
 	<a href="https://api.whatsapp.com/send?phone=971505052640&amp;text=" target="_blank" id="whatsapp" title="whatsapp" style="display: none;"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-
 	<!-- ALL JS FILES -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
+	
 	<script src="js/jquery.superslides.min.js"></script>
 	<script src="js/images-loded.min.js"></script>
 	<script src="js/isotope.min.js"></script>
 	<script src="js/baguetteBox.min.js"></script>
-	<script src="js/picker.js"></script>
-	<script src="js/picker.date.js"></script>
-	<script src="js/picker.time.js"></script>
-	<script src="js/legacy.js"></script>
 	<script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
