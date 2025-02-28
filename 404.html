@@ -43,12 +43,26 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		var isNS = (navigator.appName == "PN") ? 1 : 0;
+		if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+		function mischandler(){
+		return false;
+		}
+		function mousehandler(e){
+		var myevent = (isNS) ? e : event;
+		var eventbutton = (isNS) ? myevent.which : myevent.button;
+		if((eventbutton==2)||(eventbutton==3)) return false;
+		}
+		document.oncontextmenu = mischandler;
+		document.onmousedown = mousehandler;
+		document.onmouseup = mousehandler;
+		</script>
+	
 </head>
 
 <body>
@@ -79,7 +93,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="blog.html">blog</a>
-								<a class="dropdown-item" href="blog-details.html">blog Single</a>
+								
 							</div>
 						</li>
 						<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
