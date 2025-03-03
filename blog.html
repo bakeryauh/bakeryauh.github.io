@@ -133,13 +133,13 @@
 						<div class="comment-respond-box">
 							<h3>Leave your comment </h3>
 							<div class="comment-respond-form">
-								<form id="commentrespondform" class="comment-form-respond row" method="post">
+								<form id="submit-form" class="comment-form-respond row" method="">
 									<div class="col-lg-6 col-md-6 col-sm-6">
 										<div class="form-group">
-											<input id="name_com" class="form-control" name="name" placeholder="Name" type="text">
+											<input id="name_com" class="form-control" name="name" placeholder="Name" type="text" required >
 										</div>
 										<div class="form-group">
-											<input id="email_com" class="form-control" name="email" placeholder="Your Email" type="email">
+											<input id="email_com" class="form-control" name="email" placeholder="Your Email" type="email" required >
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6">
@@ -151,6 +151,27 @@
 										<button class="btn btn-submit">Submit comment</button>
 									</div>
 								</form>
+
+								<script>
+									$("#submit-form").submit((e)=>{
+									e.preventDefault()
+									$.ajax({
+									url:"https://script.google.com/macros/s/AKfycbxXVP1ILRmf7A9DUI3vl7OZl6Qe-2ruBW6pL27d91vUFtOaxFgjAwQRZ1LKw-aWgxHQ4Q/exec",
+									data:$("#submit-form").serialize(),
+									method:"post",
+									success:function (response){
+									alert("One of our team will be in contact with you shortly, Thank you!")
+									window.location.reload()
+									//window.location.href="https://google.com"
+									},
+									error:function (err){
+									alert("Something Error")
+									
+									}
+									})
+									})
+									</script>
+
 							</div>
 						</div>
 					</div>
