@@ -34,6 +34,24 @@
 <meta name="msapplication-TileImage" content="../img/fav/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		var isNS = (navigator.appName == "PN") ? 1 : 0;
+		if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+		function mischandler(){
+		return false;
+		}
+		function mousehandler(e){
+		var myevent = (isNS) ? e : event;
+		var eventbutton = (isNS) ? myevent.which : myevent.button;
+		if((eventbutton==2)||(eventbutton==3)) return false;
+		}
+		document.oncontextmenu = mischandler;
+		document.onmousedown = mousehandler;
+		document.onmouseup = mousehandler;
+		</script>
+
 </head>
 <body>
   <div class="tm-container">
@@ -82,13 +100,13 @@
             <nav class="tm-black-bg tm-drinks-nav">
               <ul>
                 <li>
-                  <a href="#" class="tm-tab-link active" data-id="cold">Iced Coffee</a>
+                  <a href="#" class="tm-tab-link active" data-id="cold">Breakfast</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
+                  <a href="#" class="tm-tab-link" data-id="hot">Lunch</a>
                 </li>
                 <li>
-                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+                  <a href="#" class="tm-tab-link" data-id="juice">Dinner</a>
                 </li>
               </ul>
             </nav>
@@ -202,7 +220,7 @@
             <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
               <h2 class="tm-text-primary tm-about-header">About New Indian Bakery</h2>
               <div class="tm-list-item tm-list-item-2">                
-                <img src="img/about-1.png" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+                <img src="../img/IMG_20190927_201940.jpg" alt="Image" class="tm-list-item-img tm-list-item-img-big">
                 <div class="tm-list-item-text-2">
                   <p>Indian Bakery aims to deliver Kerala's own traditional foods with it's original taste.</p>
                   <p>Kerala special snacks and tea. Food taste is moderate. Recently maintained with good outlook. Dining is well served and variety of malabari style snacks are added.</p>
@@ -278,7 +296,7 @@
               <p>Indian Bakery aims to deliver Kerala's own traditional foods with it's original taste.</p>
             </div>
             <div class="tm-black-bg tm-contact-form-container tm-align-right">
-              <form action="" method="POST" id="contact-form">
+              <form action="" method="" id="submit-form">
                 <div class="tm-form-group">
                   <input type="text" name="name" class="tm-form-control" placeholder="Name" required="" />
                 </div>
@@ -297,6 +315,27 @@
                   </button>
                 </div>
               </form>
+
+              <script>
+                $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxXVP1ILRmf7A9DUI3vl7OZl6Qe-2ruBW6pL27d91vUFtOaxFgjAwQRZ1LKw-aWgxHQ4Q/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                alert("One of our team will be in contact with you shortly, Thank you!")
+                window.location.reload()
+                //window.location.href="https://google.com"
+                },
+                error:function (err){
+                alert("Something Error")
+                
+                }
+                })
+                })
+                </script>
+
             </div>
           </div>
           <!-- end Contact Page -->
